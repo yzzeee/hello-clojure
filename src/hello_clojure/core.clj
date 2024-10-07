@@ -1,7 +1,9 @@
 (ns hello-clojure.core
   (:require [hello-clojure.data-types]
             [hello-clojure.functions :as f :refer [greet]]
-            [hello-clojure.control-structures :as cs])
+            [hello-clojure.control-structures :as cs]
+            [hello-clojure.collections :refer [demonstrate-collections]]
+            )
   (:gen-class))
 
 (defn -main
@@ -17,4 +19,7 @@
 
   (println "\n=== 제어 구조 ===")
   (cs/demonstrate-control-structures)
+
+  (println "\n=== 컬렉션 처리 ===")
+  (demonstrate-collections)
 )
