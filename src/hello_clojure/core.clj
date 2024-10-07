@@ -1,6 +1,7 @@
 (ns hello-clojure.core
   (:require [hello-clojure.data-types]
-            [hello-clojure.functions :as f :refer [greet]])
+            [hello-clojure.functions :as f :refer [greet]]
+            [hello-clojure.control-structures :as cs])
   (:gen-class))
 
 (defn -main
@@ -13,4 +14,7 @@
   (f/demonstrate-functions) ; 직접 호출
   (println (greet "Clojure"))  ; 직접 호출
   (println (f/square 5))  ; 네임스페이스 별칭 사용
-  )
+
+  (println "\n=== 제어 구조 ===")
+  (cs/demonstrate-control-structures)
+)
