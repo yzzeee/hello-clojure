@@ -1,4 +1,5 @@
 (ns hello-clojure.core
+  (:require [hello-clojure.data-types])
   (:gen-class))
 
 (defn foo
@@ -14,4 +15,8 @@
 (defn -main
   "애플리케이션 진입점"
   [& args]
-  (println (greet "Clojure Beginner")))
+  (println (greet "Clojure Beginner"))
+
+  (println "===== 기본 데이터 타입 =====")
+  (hello-clojure.data-types/demonstrate-data-types)
+  )
