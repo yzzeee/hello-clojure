@@ -3,6 +3,7 @@
             [hello-clojure.functions :as f :refer [greet]]
             [hello-clojure.control-structures :as cs]
             [hello-clojure.collections :refer [demonstrate-collections]]
+            [ns-01.fn-vs-sharp :as fs]
             )
   (:gen-class))
 
@@ -22,4 +23,18 @@
 
   (println "\n=== 컬렉션 처리 ===")
   (demonstrate-collections)
-)
+
+  (println "\n=== fn vs sharp =====")
+  (println (fs/add-or-subtract-fn 5 3))   ;; 결과: 8
+  (println (fs/add-or-subtract-fn 3 5))   ;; 결과: -2
+
+  ;; #()로 정의된 함수 호출
+  (println (fs/add-or-subtract-sharp 5 3))  ;; 결과: 8
+  (println (fs/add-or-subtract-sharp 3 5))  ;; 결과: -2
+
+  ;; fn으로 복잡한 연산 실행
+  (println (fs/complex-operation-fn 5 3))  ;; 결과: 8/15
+
+  ;; #()로 복잡한 연산 실행
+  (println (fs/complex-operation-sharp 5 3))  ;; 결과: 8/15
+  )
